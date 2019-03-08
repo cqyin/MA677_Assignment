@@ -25,7 +25,7 @@ df=read.table("maybe_uniform.txt")
 test1=c(df$V1,df$V2,df$V3,df$V4,df$V5)
 ks.test(test1,"punif")
 x<-seq(-5, 5, by=0.01)
-fx <- ifelse(x > 0 & x <=0.5, 2/3,
+fx <- ifelse(x > 0 & x <=0.5, 3/2,
    ifelse(x > 0.5 & x < 1,  0.5, 0))
 plot(x,fx)
 ks.test(fx,"punif")
